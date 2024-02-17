@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masa corporal</title>
+</head>
+<body>
+    <div id="resultado"></div>
+    <script>
+   
+    var peso = parseFloat(prompt("Ingresa tu peso en kilogramos"));
+    var altura = parseFloat(prompt("Ingresa tu altura en metros"));
+
+    if (isNaN(peso) || isNaN(altura)) {
+        document.getElementById('resultado').textContent = 'Por favor, ingresa números válidos';
+    } else {
+        var mc = peso / (altura * altura);
+        document.getElementById('resultado').textContent = 'Peso: '+peso+'kg '+' Altura: '+altura+'. El índice de Masa Corporal es: ' + mc.toFixed(2);
+    }
+    </script>
+</body>
+</html>
